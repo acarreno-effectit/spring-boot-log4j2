@@ -1,0 +1,12 @@
+version: "3.7"
+
+# Definicion del servicio
+services:
+  log4j2:
+    image: spring-boot-log4j2:1.0.0
+    ports:
+      - "8080:8080"
+    volumes:
+      - D:/Dev/logs:/logs
+    # Este atributo se usa para que el servicio se inicie automaticamente al estar iniciado Docker
+    #restart: unless-stopped

@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-boot-log4j2
+#azure:
+#  application-insights:
+#    instrumentation-key: 80ccee49-546b-4b5d-91bd-270a31246255
+#    web:
+#      w3c: true
+#    connection-string: InstrumentationKey=80ccee49-546b-4b5d-91bd-270a31246255
+#    logger:
+#      level: info
+#      type: console
