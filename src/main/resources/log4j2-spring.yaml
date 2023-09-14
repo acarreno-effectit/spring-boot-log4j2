@@ -6,20 +6,17 @@ Configuration:
       value: '[Thread: %tid] %d{HH:mm:ss.SSS} [%logger{36}] %-5level - %msg%n'
     - name: path
       value: logs
-#------------- Configuracion de Appenders ------------------#
   Appenders:
     Console:
       name: Console
       target: SYSTEM_OUT
       PatternLayout:
         pattern: ${pattern}
-#--------- Configuracion de archivo app.log unico -----------#
 #    File:
 #      name: File
 #      fileName: ${path}/app.log
 #      PatternLayout:
 #        pattern: ${pattern}
-#- Configuracion de archivo app.log generado y archivado por tamaño -#
     RollingFile:
       name: RollingFile
       fileName: ${path}/app.log
@@ -31,24 +28,22 @@ Configuration:
           size: 10 MB
       DefaultRollOverStrategy:
         max: 30
-#-------- Configuracion de Application Insight -------------#
 #    ApplicationInsightsAppender:
 #      name: ApplicationInsightAppender
-#-------------- Configuracion de Loggers -------------------#
   Loggers:
     Logger:
     - name: com.spring.boot.log4j2
       additivity: false
-      level: trace # Nivel raiz (Si no se configura nivel por cada AppenderRef toma este valor por default)
+      level: trace
       AppenderRef:
       - ref: Console
-        level: debug # Nivel de lo que se imprime en consola
+        level: debug
 #      - ref: File
-#        level: error # Nivel de lo que se imprime en el archivo
+#        level: error
       - ref: RollingFile
-        level: info # Nivel de lo que se imprime en el archivo rolling
+        level: info
 #      - ref: ApplicationInsightAppender
-#        level: info # Nivel de lo que se imprime en el Application Insight de Azure
+#        level: info
     Root:
       AppenderRef:
       - ref: Console
