@@ -7,12 +7,12 @@ Configuration:
     - name: path
       value: logs
 #------------- Configuracion de Appenders ------------------#
-#  Appenders:
-#    Console:
-#      name: Console
-#      target: SYSTEM_OUT
-#      PatternLayout:
-#        pattern: ${pattern}
+  Appenders:
+    Console:
+      name: Console
+      target: SYSTEM_OUT
+      PatternLayout:
+        pattern: ${pattern}
 #--------- Configuracion de archivo app.log unico -----------#
 #    File:
 #      name: File

@@ -13,7 +13,7 @@
 	<artifactId>spring-boot-log4j2</artifactId>
 	<version>1.0.0</version>
 	<name>spring-boot-log4j2</name>
-	<description>Ejemplo de Uso de Log4j2</description>
+	<description>Example to configure Log4j2</description>
 
 	<properties>
 		<java.version>17</java.version>
@@ -22,7 +22,6 @@
 
 	<dependencies>
 
-		<!-- Inicio Dependencia de Spring -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -38,16 +37,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-log4j2</artifactId>
 		</dependency>
-		<!-- Fin Dependencia de Spring -->
 
-		<!-- Inicio Dependencia para el uso de Lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
-		<!-- Fin Dependencia para el uso de Lombok -->
 
-		<!-- Inicio Dependencia para el uso de Application Insights -->
+		<!-- Init Dependencies to configure Azure Application Insight -->
 		<!--dependency>
 			<groupId>com.microsoft.azure</groupId>
 			<artifactId>applicationinsights-spring-boot-starter</artifactId>
@@ -59,9 +55,9 @@
 			<artifactId>applicationinsights-logging-log4j2</artifactId>
 			<version>2.6.0</version>
 		</dependency -->
-		<!-- Fin Dependencia para el uso de Application Insights -->
+		<!-- End Dependencies to configure Azure Application Insight -->
 
-		<!-- Inicio dependencia para que lea el archivo de configuracion log4j2.yaml -->
+		<!-- Init Dependencies to configure log4j2.yaml -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-yaml</artifactId>
@@ -70,7 +66,7 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 		</dependency>
-		<!-- Fin dependencia para que lea el archivo de configuracion log4j2.yaml -->
+		<!-- End Dependencies to configure log4j2.yaml -->
 
 	</dependencies>
 
